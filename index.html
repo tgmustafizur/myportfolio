@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mustafizur Rohman — Video Editor &amp; Graphic Designer</title>
+<meta name="description" content="Mustafizur Rohman — Graphics Designer & Video Editor in Dhaka, Bangladesh. VOX-style video editing, motion graphics, branding & social media design." />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --dark:#10181A;
+  --dark2:#182226;
+  --dark3:#212F33;
+  --gold:#5EEAD4;
+  --plum:#14535E;
+  --rose:#1B6B76;
+  --red1:#0F3D42;
+  --red2:#14899C;
+  --peach:#2DD4BF;
+  --teal:#2C7A8C;
+  --purple:#1F4B52;
+  --blue:#7DD3D8;
+  --cream:#E8EDEE;
+  --offwhite:#F4F7F7;
+  --muted:#7C8C90;
+  --border:rgba(45,212,191,0.16);
+  --nav-h:60px;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Outfit',sans-serif;
+  background:var(--dark);
+  color:var(--cream);
+  font-size:15px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+::selection{background:var(--gold);color:var(--dark)}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--dark)}
+::-webkit-scrollbar-thumb{background:var(--dark3);border-radius:10px}
+::-webkit-scrollbar-thumb:hover{background:var(--rose)}
+a{color:inherit}
+img{max-width:100%;display:block}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:var(--dark);
+  height:var(--nav-h);
+  display:flex;align-items:center;
+  padding:0 2rem;gap:0;
+  border-bottom:1px solid var(--border);
+}
+.nav-brand{
+  font-family:'DM Serif Display',serif;
+  color:var(--cream);font-size:17px;
+  margin-right:auto;letter-spacing:0.01em;
+  text-decoration:none;display:flex;align-items:center;gap:9px;
+}
+.nav-brand span{color:var(--peach)}
+.nav-logo{width:30px;height:30px;object-fit:contain;flex-shrink:0}
+.nav-links{display:flex;gap:2px;align-items:center}
+.nav-links a{
+  color:rgba(243,237,232,0.55);
+  font-size:13px;font-weight:400;
+  text-decoration:none;
+  padding:6px 14px;border-radius:6px;
+  transition:all .18s;letter-spacing:0.02em;
+  white-space:nowrap;
+}
+.nav-links a:hover{color:var(--cream);background:rgba(255,255,255,0.06)}
+.nav-links a.active{color:var(--peach);background:rgba(225,117,100,0.1)}
+.nav-cta{
+  margin-left:10px;background:var(--red2);color:var(--cream)!important;
+  padding:7px 16px!important;border-radius:20px!important;
+  font-weight:500;
+}
+.nav-cta:hover{background:var(--peach)!important;color:var(--dark)!important}
+.nav-toggle{display:none;background:none;border:none;color:var(--cream);font-size:22px;cursor:pointer;margin-left:auto}
+
+/* ── HERO ── */
+.hero{
+  background:var(--dark);
+  padding:5rem 2rem 4rem;
+  text-align:center;
+  position:relative;overflow:hidden;
+  min-height:560px;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 60% at 50% 110%, rgba(97,45,83,0.5) 0%, transparent 70%);
+  pointer-events:none;
+}
+.hero::after{
+  content:'';position:absolute;top:-20%;right:-10%;width:500px;height:500px;
+  background:radial-gradient(circle, rgba(212,168,87,0.1) 0%, transparent 65%);
+  pointer-events:none;
+}
+.hero-inner{position:relative;z-index:1;max-width:640px;margin:0 auto}
+.avatar{
+  width:92px;height:92px;border-radius:50%;
+  margin:0 auto 1.5rem;border:2px solid var(--gold);
+  object-fit:cover;box-shadow:0 0 0 6px rgba(212,168,87,0.1), 0 8px 24px -8px rgba(0,0,0,0.6);
+  animation:riseIn .7s ease both;
+}
+.hero-eyebrow{
+  display:inline-block;
+  font-family:'DM Mono',monospace;
+  font-size:11px;letter-spacing:0.12em;
+  color:var(--gold);
+  background:rgba(212,168,87,0.1);
+  border:1px solid rgba(212,168,87,0.3);
+  padding:4px 14px;border-radius:20px;
+  margin-bottom:1.25rem;text-transform:uppercase;
+  animation:riseIn .7s ease .05s both;
+}
+.hero h1{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(2rem,5vw,3.4rem);
+  color:var(--cream);
+  line-height:1.15;margin-bottom:0.9rem;
+  animation:riseIn .7s ease .1s both;
+}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero-sub{
+  color:rgba(243,237,232,0.55);
+  font-size:15px;max-width:520px;margin:0 auto 2rem;
+  font-weight:300;letter-spacing:0.01em;
+  animation:riseIn .7s ease .15s both;
+}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem;animation:riseIn .7s ease .2s both}
+.btn{
+  font-family:'Outfit',sans-serif;font-size:13.5px;font-weight:500;
+  padding:11px 24px;border-radius:24px;text-decoration:none;
+  transition:all .2s;letter-spacing:0.01em;cursor:pointer;border:none;
+  display:inline-flex;align-items:center;gap:6px;
+}
+.btn-primary{background:var(--red2);color:var(--cream)}
+.btn-primary:hover{background:var(--peach);color:var(--dark);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--cream);border:1px solid rgba(243,237,232,0.25)}
+.btn-ghost:hover{border-color:var(--peach);color:var(--peach)}
+.hero-stats{display:flex;justify-content:center;gap:2.2rem;flex-wrap:wrap;animation:riseIn .7s ease .25s both}
+.hstat{text-align:center}
+.hstat-val{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--cream)}
+.hstat-lbl{font-size:10.5px;color:rgba(243,237,232,0.4);text-transform:uppercase;letter-spacing:0.08em;font-family:'DM Mono',monospace;margin-top:2px}
+
+.hero-tools-bg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.tool-icon{
+  position:absolute;width:50px;height:50px;border-radius:13px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Outfit',sans-serif;font-weight:700;font-size:14px;letter-spacing:-0.02em;
+  opacity:0.4;box-shadow:0 10px 22px -10px rgba(0,0,0,0.7);
+  animation:toolFloat 7s ease-in-out infinite;
+}
+@keyframes toolFloat{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-14px) rotate(var(--r,0deg))}}
+@media (max-width:640px){.tool-icon{width:38px;height:38px;font-size:11px;border-radius:10px}}
+
+@keyframes riseIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── SECTIONS ── */
+section{padding:4.5rem 2rem;max-width:1080px;margin:0 auto}
+.section-label{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:2rem;
+}
+.section-label .bar{
+  width:3px;height:20px;border-radius:2px;
+  background:var(--red2);flex-shrink:0;
+}
+.section-label h2{
+  font-family:'DM Serif Display',serif;
+  font-size:1.7rem;font-weight:400;
+  color:var(--cream);letter-spacing:-0.01em;
+}
+.section-label .bar{background:var(--gold)}
+.section-label .badge{
+  font-family:'DM Mono',monospace;
+  font-size:10px;letter-spacing:0.08em;
+  color:var(--muted);text-transform:uppercase;
+  margin-left:auto;
+}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:2.5rem;align-items:start}
+.about-text p{color:rgba(243,237,232,0.7);font-size:15px;margin-bottom:1rem;font-weight:300;line-height:1.75}
+.about-text p:last-child{margin-bottom:0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.5rem}
+.tag{
+  font-size:12px;padding:5px 13px;border-radius:20px;
+  border:1px solid var(--border);
+  color:var(--peach);background:var(--dark2);
+  font-family:'DM Mono',monospace;letter-spacing:0.02em;
+}
+.about-card{
+  background:var(--dark2);border:1px solid var(--border);border-radius:16px;padding:1.75rem;
+  position:relative;overflow:hidden;box-shadow:0 8px 24px -12px rgba(0,0,0,0.5);
+}
+.about-card::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 20% 0%, rgba(97,45,83,0.6) 0%, transparent 70%);
+}
+.about-card-row{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.07);position:relative;z-index:1}
+.about-card-row:last-child{border-bottom:none}
+.about-card-lbl{font-size:13.5px;color:var(--cream);font-weight:600;font-family:inherit;text-transform:none;letter-spacing:0}
+.about-card-val{font-size:12px;color:rgba(243,237,232,0.55);font-weight:400;text-align:left}
+
+/* ── WORK GRID ── */
+.work-filter{display:flex;gap:8px;margin-bottom:1.75rem;flex-wrap:wrap}
+.filter-btn{
+  padding:7px 15px;border-radius:20px;border:1px solid var(--border);
+  background:var(--dark2);color:var(--muted);font-family:'Outfit',sans-serif;
+  font-size:12.5px;font-weight:500;cursor:pointer;transition:all .15s;
+}
+.filter-btn.active{background:var(--red2);color:var(--cream);border-color:var(--red2)}
+.work-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.work-card{
+  background:var(--dark2);border:1px solid var(--border);border-radius:14px;
+  overflow:hidden;text-decoration:none;color:var(--cream);
+  transition:transform .25s, box-shadow .25s, border-color .25s;display:flex;flex-direction:column;
+  box-shadow:0 8px 24px -12px rgba(0,0,0,0.5);
+}
+.work-card:hover{transform:translateY(-5px);border-color:var(--peach);box-shadow:0 20px 40px -14px rgba(0,0,0,0.65)}
+.work-thumb{width:100%;aspect-ratio:4/3;overflow:hidden;background:var(--dark2);position:relative}
+.work-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.work-card:hover .work-thumb img{transform:scale(1.07)}
+.work-thumb-overlay{
+  position:absolute;inset:0;background:linear-gradient(0deg, rgba(26,10,16,0.75) 0%, transparent 45%);
+  display:flex;align-items:flex-end;padding:12px;opacity:0;transition:opacity .25s;
+}
+.work-card:hover .work-thumb-overlay{opacity:1}
+.work-thumb-overlay span{color:var(--cream);font-size:12px;font-family:'DM Mono',monospace;letter-spacing:0.04em}
+.work-body{padding:0.9rem 1.1rem 1.1rem;display:flex;flex-direction:column;gap:6px;flex:1}
+.work-top{display:flex;align-items:center;gap:8px;justify-content:space-between}
+.work-name{font-size:14.5px;font-weight:500;color:var(--cream)}
+.work-cat{
+  font-size:10.5px;padding:2px 9px;border-radius:20px;flex-shrink:0;
+  font-family:'DM Mono',monospace;letter-spacing:0.03em;white-space:nowrap;
+}
+.work-cat.video{background:rgba(49,133,155,0.1);color:var(--teal)}
+.work-cat.graphics{background:rgba(95,73,122,0.1);color:var(--purple)}
+.work-meta{display:flex;gap:14px;font-size:11.5px;color:var(--muted)}
+.work-meta span{display:flex;align-items:center;gap:4px}
+
+.view-more-wrap{text-align:center;margin-top:2.25rem}
+
+/* ── SERVICES STRIP ── */
+.svc-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.svc-tile{
+  background:var(--dark2);border:1px solid var(--border);border-radius:14px;
+  padding:1.5rem;transition:border-color .2s, transform .2s;box-shadow:0 8px 24px -12px rgba(0,0,0,0.5);
+}
+.svc-tile:hover{border-color:var(--gold);transform:translateY(-3px)}
+.svc-tile-icon{font-size:22px;margin-bottom:0.85rem;display:block}
+.svc-tile h3{font-family:'DM Serif Display',serif;font-size:1.05rem;font-weight:400;margin-bottom:6px}
+.svc-tile p{font-size:12.5px;color:var(--muted);line-height:1.55}
+.pricing-cta{
+  margin-top:1.75rem;background:var(--dark2);border:1px solid var(--border);border-radius:16px;
+  padding:1.75rem 2rem;display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;flex-wrap:wrap;position:relative;overflow:hidden;
+}
+.pricing-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 100% at 100% 50%, rgba(97,45,83,0.5) 0%, transparent 70%)}
+.pricing-cta-text{position:relative;z-index:1}
+.pricing-cta-text h3{font-family:'DM Serif Display',serif;color:var(--cream);font-size:1.2rem;font-weight:400;margin-bottom:4px}
+.pricing-cta-text p{color:rgba(243,237,232,0.5);font-size:13px}
+.pricing-cta .btn{position:relative;z-index:1}
+
+/* ── CONTACT ── */
+.contact-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:2.5rem}
+.contact-info{display:flex;flex-direction:column;gap:1.5rem}
+.contact-info p{color:var(--muted);font-size:14px;line-height:1.7}
+.contact-links{display:flex;flex-direction:column;gap:10px}
+.contact-link{
+  display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream);
+  font-size:13.5px;padding:10px 14px;border:1px solid var(--border);border-radius:10px;
+  background:var(--dark2);transition:border-color .15s;
+}
+.contact-link:hover{border-color:var(--gold)}
+.contact-link .ico{width:30px;height:30px;border-radius:8px;background:var(--dark);color:var(--peach);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;font-family:'DM Mono',monospace}
+
+.form-card{background:var(--dark2);border:1px solid var(--border);border-radius:16px;padding:1.75rem;box-shadow:0 8px 24px -12px rgba(0,0,0,0.5)}
+.form-row{margin-bottom:1rem}
+.form-row label{display:block;font-size:11.5px;color:var(--muted);margin-bottom:6px;font-family:'DM Mono',monospace;letter-spacing:0.04em;text-transform:uppercase}
+.form-row input,.form-row textarea,.form-row select{
+  width:100%;border:1px solid var(--border);background:var(--dark);
+  color:var(--cream);border-radius:8px;padding:11px 13px;
+  font-family:'Outfit',sans-serif;font-size:14px;outline:none;transition:border .15s, box-shadow .15s;
+  resize:vertical;
+}
+.form-row input::placeholder,.form-row textarea::placeholder{color:rgba(243,237,232,0.3)}
+.form-row input:focus,.form-row textarea:focus,.form-row select:focus{border-color:var(--gold);background:var(--dark2);box-shadow:0 0 0 3px rgba(212,168,87,0.12)}
+.form-row textarea{min-height:110px}
+.form-submit{width:100%;justify-content:center;font-size:14px;padding:13px}
+.form-note{font-size:11.5px;color:var(--muted);margin-top:0.9rem;line-height:1.6;text-align:center}
+.form-status{font-size:13px;margin-top:0.9rem;padding:10px 14px;border-radius:8px;display:none;text-align:center}
+.form-status.show{display:block}
+.form-status.ok{background:rgba(46,125,90,0.1);color:#2e7d5a}
+.form-status.err{background:rgba(190,49,68,0.08);color:var(--red2)}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--dark);color:rgba(243,237,232,0.5);
+  padding:2.75rem 2rem 2rem;text-align:center;
+  font-size:12.5px;position:relative;
+}
+.footer-brand{font-family:'DM Serif Display',serif;color:var(--cream);font-size:1.15rem;margin-bottom:0.5rem}
+.footer-brand span{color:var(--peach)}
+.footer-socials{display:flex;justify-content:center;gap:10px;margin:1.25rem 0;flex-wrap:wrap}
+.footer-socials a{
+  width:34px;height:34px;border-radius:50%;border:1px solid rgba(243,237,232,0.15);
+  display:flex;align-items:center;justify-content:center;text-decoration:none;
+  color:rgba(243,237,232,0.6);font-size:11px;font-family:'DM Mono',monospace;transition:all .18s;
+}
+.footer-socials a:hover{border-color:var(--peach);color:var(--peach)}
+.footer-socials a svg{display:block}
+.footer-links{display:flex;justify-content:center;gap:18px;margin-bottom:1rem;flex-wrap:wrap}
+.footer-links a{color:rgba(243,237,232,0.45);text-decoration:none;font-size:12.5px}
+.footer-links a:hover{color:var(--peach)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:1.25rem;margin-top:1.25rem;color:rgba(243,237,232,0.3)}
+
+/* ── RATE CARD: DIVIDER ── */
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border) 20%,var(--border) 80%,transparent);max-width:1080px;margin:0 auto}
+
+/* ── RATE CARD: STAT ROW ── */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem}
+.stat{background:var(--dark2);border:1px solid var(--border);border-radius:10px;padding:1rem}
+.stat-lbl{font-size:12px;color:var(--muted);margin-bottom:4px}
+.stat-val{font-size:22px;font-weight:600;color:var(--cream)}
+
+/* ── RATE CARD: CONTROLS ── */
+.controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1rem}
+.controls input,.controls select{
+  flex:1;min-width:140px;border:1px solid var(--border);background:var(--dark2);color:var(--cream);
+  border-radius:8px;padding:8px 12px;font-family:'Outfit',sans-serif;font-size:13px;
+  outline:none;transition:border .15s;
+}
+.controls input::placeholder{color:rgba(243,237,232,0.3)}
+.controls input:focus,.controls select:focus{border-color:var(--gold)}
+
+/* ── RATE CARD: CURRENCY TABS ── */
+.tabs{display:flex;gap:6px;margin-bottom:1.25rem}
+.tab-btn{
+  flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);
+  background:var(--dark2);color:var(--muted);font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;
+  cursor:pointer;transition:all .15s;
+}
+.tab-btn.active{background:var(--red2);color:var(--cream);border-color:var(--red2)}
+
+/* ── RATE CARD: SERVICE ROWS ── */
+.svc-list{display:flex;flex-direction:column;gap:6px}
+.svc-row{background:var(--dark2);border:1px solid var(--border);border-radius:10px;padding:0.85rem 1rem;display:flex;flex-direction:column;gap:6px;transition:border-color .15s}
+.svc-row:hover{border-color:rgba(190,49,68,0.3)}
+.svc-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.svc-name{font-size:14px;font-weight:500;color:var(--cream);flex:1}
+.svc-cat{font-size:11px;padding:2px 9px;border-radius:20px;font-family:'DM Mono',monospace;letter-spacing:0.04em}
+.svc-cat.video{background:rgba(49,133,155,0.1);color:var(--teal)}
+.svc-cat.graphics{background:rgba(95,73,122,0.1);color:var(--purple)}
+.svc-prices{display:flex;gap:20px;flex-wrap:wrap}
+.svc-price{display:flex;flex-direction:column}
+.svc-price-lbl{font-size:10px;color:var(--muted);font-family:'DM Mono',monospace;letter-spacing:0.06em;text-transform:uppercase}
+.svc-price-val{font-size:18px;font-weight:600}
+.svc-price-val.b{color:var(--rose)}
+.svc-price-val.m{color:var(--red2)}
+.svc-price-val.p{color:var(--peach)}
+.svc-price-unit{font-size:11px;font-weight:400;color:var(--muted);margin-left:2px}
+.empty-state{text-align:center;padding:3rem;color:var(--muted);font-size:14px}
+
+/* ── RATE CARD: RETAINER PLANS ── */
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:1.25rem}
+.plan{background:var(--dark2);border:1px solid var(--border);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.plan.featured{border-color:var(--gold);border-width:2px;box-shadow:0 0 32px -8px rgba(212,168,87,0.35)}
+.plan-head{padding:1.25rem 1.25rem 1rem;border-bottom:1px solid var(--border)}
+.plan-head.featured-head{background:linear-gradient(155deg,var(--plum),var(--dark2))}
+.plan-badge{display:inline-block;font-size:10px;font-family:'DM Mono',monospace;letter-spacing:0.07em;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:8px}
+.plan-badge.pop{background:rgba(190,49,68,0.1);color:var(--red2)}
+.plan-badge.pop.inv{background:rgba(225,117,100,0.2);color:var(--peach)}
+.plan-title{font-family:'DM Serif Display',serif;font-size:1.2rem;margin-bottom:2px}
+.plan-title.light{color:var(--cream)}
+.plan-usd{font-size:28px;font-weight:600;line-height:1.1;margin:8px 0 2px}
+.plan-usd.light{color:var(--cream)}
+.plan-bdt{font-size:12px;color:var(--muted);font-family:'DM Mono',monospace}
+.plan-bdt.light{color:rgba(243,237,232,0.45)}
+.plan-body{padding:1rem 1.25rem;display:flex;flex-direction:column;gap:7px;flex:1}
+.plan-feat{display:flex;gap:8px;font-size:13px;color:rgba(243,237,232,0.75);line-height:1.35}
+.plan-feat::before{content:'✓';color:var(--red2);font-weight:600;flex-shrink:0}
+.rush-strip{background:linear-gradient(155deg,var(--plum),var(--dark2));border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:0.5rem}
+.rush-strip-label{color:var(--cream);font-weight:500;font-size:15px}
+.rush-strip-note{font-size:12px;color:rgba(243,237,232,0.45);margin-top:2px}
+.rush-strip-price{margin-left:auto;text-align:right}
+.rush-strip-usd{font-size:24px;font-weight:600;color:var(--peach)}
+.rush-strip-bdt{font-size:12px;color:rgba(243,237,232,0.4);font-family:'DM Mono',monospace}
+
+/* ── RATE CARD: ADD-ON TABLE ── */
+.addon-section-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);padding:0.85rem 0 0.35rem;border-top:1px solid var(--border);margin-top:0.5rem}
+.addon-section-title:first-child{border-top:none;margin-top:0;padding-top:0}
+.addon-card{background:var(--dark2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin-bottom:1rem}
+.addon-row{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid rgba(135,35,65,0.07);flex-wrap:wrap}
+.addon-row:last-child{border-bottom:none;padding-bottom:0}
+.addon-name{font-size:13.5px;font-weight:500;color:var(--cream);flex:1;min-width:140px}
+.addon-desc{font-size:12px;color:var(--muted);margin-top:1px}
+.addon-price{font-size:17px;font-weight:600;color:var(--red2);white-space:nowrap;text-align:right}
+.addon-price.free{color:#2e7d5a}
+.rush-warning{background:rgba(212,168,87,0.07);border:1px solid rgba(212,168,87,0.25);border-radius:10px;padding:1rem 1.25rem;font-size:13px;color:var(--gold);margin-bottom:1.25rem;display:flex;gap:10px;align-items:flex-start}
+.rush-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.25rem}
+.rush-card{background:linear-gradient(155deg,var(--plum),var(--dark2));border:1px solid var(--border);border-radius:12px;padding:1.25rem}
+.rush-mult{font-size:36px;font-weight:700;color:var(--peach);line-height:1}
+.rush-card-title{font-size:14px;font-weight:500;color:var(--cream);margin-top:6px}
+.rush-card-sub{font-size:12px;color:rgba(243,237,232,0.4);margin-top:3px}
+.rush-card-note{font-size:11px;color:rgba(243,237,232,0.3);margin-top:8px;font-family:'DM Mono',monospace}
+
+/* ── RATE CARD: TIERS ── */
+.tier-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-bottom:1.5rem}
+.tier-card{background:var(--dark2);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.tier-card{color:rgba(243,237,232,0.8)}
+.tier-name{color:var(--cream)}
+.tier-card.t-mid{border-color:var(--red2)}
+.tier-card.t-prem{border-color:var(--gold);box-shadow:0 0 32px -8px rgba(212,168,87,0.3)}
+.tier-head-bar{height:4px}
+.tier-head-bar.b1{background:var(--rose)}
+.tier-head-bar.b2{background:var(--red2)}
+.tier-head-bar.b3{background:var(--peach)}
+.tier-head{padding:1rem 1.25rem 0.75rem;border-bottom:1px solid var(--border)}
+.tier-name{font-family:'DM Serif Display',serif;font-size:1.2rem;font-weight:400}
+.tier-tag{display:inline-block;font-size:10px;font-family:'DM Mono',monospace;letter-spacing:0.07em;text-transform:uppercase;padding:2px 8px;border-radius:20px;margin-top:5px}
+.tier-tag.t1{background:rgba(135,35,65,0.08);color:var(--rose)}
+.tier-tag.t2{background:rgba(190,49,68,0.1);color:var(--red2)}
+.tier-tag.t3{background:rgba(225,117,100,0.12);color:var(--peach)}
+.tier-feats{padding:1rem 1.25rem;display:flex;flex-direction:column;gap:6px}
+.feat{display:flex;gap:8px;font-size:13px;line-height:1.4}
+.feat .ck{font-size:13px;flex-shrink:0;margin-top:1px}
+.feat.plus .ck{color:var(--red2)}
+.feat.inherited{color:var(--muted);font-style:italic}
+.feat.inherited .ck{color:var(--muted)}
+
+.compare-wrap{background:var(--dark2);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:0.5rem}
+.compare-head{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:0.6rem 1rem;background:var(--dark3);gap:6px}
+.compare-head span{font-size:12px;font-weight:500;color:rgba(243,237,232,0.5);text-align:center}
+.compare-head span:first-child{text-align:left;color:var(--cream)}
+.compare-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:0.55rem 1rem;gap:6px;align-items:center;border-bottom:1px solid rgba(135,35,65,0.07)}
+.compare-row:last-child{border-bottom:none}
+.compare-row:nth-child(even){background:rgba(225,117,100,0.04)}
+.compare-row span{font-size:13px;text-align:center;color:var(--muted)}
+.compare-row span:first-child{text-align:left;color:var(--cream);font-weight:500}
+.ck-yes{color:var(--red2);font-size:15px;text-align:center}
+.ck-no{color:rgba(243,237,232,0.15);font-size:18px;text-align:center}
+.ck-txt{font-size:12px;color:var(--rose);font-family:'DM Mono',monospace;text-align:center}
+
+/* ── RATE CARD: PAYMENT DETAILS ── */
+.transaction-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
+.transaction-card{background:var(--dark2);border:1px solid var(--border);border-radius:14px;padding:1.35rem}
+.transaction-card h3{font-family:'DM Serif Display',serif;font-size:1.25rem;font-weight:400;color:var(--cream);margin-bottom:.35rem}
+.transaction-card p{font-size:13px;color:var(--muted);margin-bottom:1rem}
+.payment-method{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:.8rem 0;border-top:1px solid var(--border)}
+.payment-method:first-of-type{border-top:0}
+.payment-name{font-weight:500;color:var(--cream)}
+.payment-type{font:10px 'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.copy-value{display:flex;align-items:center;gap:8px;background:var(--dark);border:1px solid var(--border);border-radius:8px;padding:8px 10px;font:12px 'DM Mono',monospace;color:var(--cream)}
+.copy-btn{cursor:pointer;border:0;border-radius:6px;background:var(--gold);color:var(--dark);font:600 11px 'Outfit',sans-serif;padding:5px 8px}
+.bank-list{display:grid;gap:10px}
+.bank-card{border:1px solid var(--border);background:var(--dark);border-radius:10px;padding:1rem}
+.bank-card h4{font-size:14px;color:var(--cream);margin-bottom:.55rem}
+.bank-detail{display:grid;grid-template-columns:120px 1fr;gap:8px;padding:.32rem 0;font-size:12px}
+.bank-detail span:first-child{color:var(--muted)}
+.bank-detail span:last-child{font-family:'DM Mono',monospace;color:var(--cream);overflow-wrap:anywhere}
+.transaction-note{margin-top:1rem;padding:.8rem;border-radius:8px;background:rgba(212,168,87,0.08);color:var(--peach);font-size:12px}
+@media(max-width:600px){
+  .transaction-grid{grid-template-columns:1fr}
+  .copy-value{font-size:11px}
+  .payment-method{align-items:flex-start;flex-direction:column}
+  .bank-detail{grid-template-columns:105px 1fr}
+  .rush-cards{grid-template-columns:1fr}
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .6s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+@media (max-width:820px){
+  .about-grid,.contact-wrap{grid-template-columns:1fr}
+  .nav-links{
+    position:fixed;top:var(--nav-h);left:0;right:0;background:var(--dark);
+    flex-direction:column;align-items:stretch;padding:10px;gap:2px;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    transform:translateY(-140%);transition:transform .25s;z-index:99;
+  }
+  .nav-links.open{transform:translateY(0)}
+  .nav-links a{padding:12px 14px}
+  .nav-toggle{display:block}
+  .nav-cta{margin-left:14px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#top" class="nav-brand"><img class="nav-logo" src="data:image/png;base64,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" alt="Mustafizur Rohman logo" />Mustafizur<span> Rohman</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="#top" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#services">Services</a>
+    <a href="#dashboard">Pricing</a>
+    <a href="#contact">Contact</a>
+    <a href="https://www.upwork.com/freelancers/~01585c41ed8ebe7652?mp_source=share" target="_blank" rel="noopener" class="nav-cta">Hire Me</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════ HERO -->
+<section class="hero" id="top" style="padding-left:0;padding-right:0;max-width:none">
+  <div class="hero-tools-bg" aria-hidden="true">
+    <div class="tool-icon" style="top:9%;left:6%;background:#00005B;color:#9999FF;--r:-8deg;animation-delay:0s">Pr</div>
+    <div class="tool-icon" style="top:16%;right:9%;background:#1B0B33;color:#9999FF;--r:6deg;animation-delay:.8s">Ae</div>
+    <div class="tool-icon" style="bottom:14%;left:9%;background:#00005B;color:#00E4B8;--r:5deg;animation-delay:1.6s">Au</div>
+    <div class="tool-icon" style="bottom:19%;right:7%;background:#001E36;color:#31A8FF;--r:-6deg;animation-delay:2.4s">Ps</div>
+    <div class="tool-icon" style="top:40%;left:3%;background:#330000;color:#FF9A00;--r:7deg;animation-delay:3.2s">Ai</div>
+    <div class="tool-icon" style="top:44%;right:3%;background:#161616;color:#FF6A2B;--r:-5deg;animation-delay:4s">Dr</div>
+  </div>
+  <div class="hero-inner">
+    <img class="avatar" src="https://pps.services.adobe.com/api/profile/3EA543AB64AEB67C0A495ED8@AdobeID/image/ecadf0d3-f844-4fd3-9345-d2c06c194496/276" alt="Mustafizur Rohman" loading="lazy" />
+    <div class="hero-eyebrow">Available for Freelance &amp; Full-time</div>
+    <h1>Video Editor &amp; <em>Graphics Designer</em><br>based in Dhaka</h1>
+    <p class="hero-sub">I craft scroll-stopping VOX-style videos, motion graphics and brand visuals that help creators and businesses connect with their audience — currently at UY Lab, taking on freelance projects on the side.</p>
+    <div class="hero-actions">
+      <a href="#work" class="btn btn-primary">View My Work</a>
+      <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-val">3,084</div><div class="hstat-lbl">Project Views</div></div>
+      <div class="hstat"><div class="hstat-val">105</div><div class="hstat-lbl">Appreciations</div></div>
+      <div class="hstat"><div class="hstat-val">34</div><div class="hstat-lbl">Followers</div></div>
+      <div class="hstat"><div class="hstat-val">3+ yrs</div><div class="hstat-lbl">Experience</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ ABOUT -->
+<section id="about">
+  <div class="section-label"><div class="bar"></div><h2>About</h2><span class="badge">Who I am</span></div>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p style="color:var(--cream);font-weight:400">Certified by UY Lab, Dhaka — with a track record built on real client work, an ICT &amp; English skills award, and a science-track education.</p>
+      <p>I am a passionate and creative Graphics Designer and Video Editor with over 3+ years of experience. I specialize in creating high-quality visual content, editing videos with storytelling impact, and designing graphics tailored for social media platforms such as YouTube, Facebook, and Instagram. I am committed to delivering work that combines aesthetics and effectiveness to meet client expectations.</p>
+      <p>Skilled in editing YouTube videos, promos, and short-form content using Premiere Pro &amp; After Effects. I design striking thumbnails, banners, and social media visuals with Photoshop &amp; Illustrator, and deliver branded video and graphic assets for marketing and digital platforms.</p>
+      <div class="tags">
+        <span class="tag">Adobe Premiere Pro</span>
+        <span class="tag">Adobe After Effects</span>
+        <span class="tag">Adobe Audition</span>
+        <span class="tag">Adobe Photoshop</span>
+        <span class="tag">Adobe Illustrator</span>
+        <span class="tag">Adobe InDesign</span>
+        <span class="tag">Adobe Lightroom</span>
+        <span class="tag">CapCut (PC)</span>
+      </div>
+      <div class="tags">
+        <span class="tag">Motion Graphics Design</span>
+        <span class="tag">Unscripted Video Editing</span>
+        <span class="tag">Creative Designing</span>
+        <span class="tag">Content Creation (YouTube, Facebook, Instagram)</span>
+      </div>
+    </div>
+    <div class="about-card reveal">
+      <div class="about-card-row"><span class="about-card-lbl">Professional Video Editing (Online) — UY Lab</span><span class="about-card-val">Student ID VE-02505046105 · Apr-Aug 2025 · Issued 10 Aug 2025</span></div>
+      <div class="about-card-row"><span class="about-card-lbl">Professional Graphic Design (Online) — UY Lab</span><span class="about-card-val">Student ID GD-02426116105 · Nov 2024-Apr 2025 · Issued 20 Apr 2025</span></div>
+      <div class="about-card-row"><span class="about-card-lbl">English Language &amp; ICT Skills Award</span><span class="about-card-val">Spoken &amp; Written English — S@ifur's · 2022</span></div>
+      <div class="about-card-row"><span class="about-card-lbl">Higher Secondary Certificate (Science)</span><span class="about-card-val">Shaikh Burhanuddin Post Graduate College · GPA 4.17/5.00 · 2024</span></div>
+      <div class="about-card-row"><span class="about-card-lbl">Secondary School Certificate (Science)</span><span class="about-card-val">East Jurain Ideal High School · GPA 4.78/5.00 · 2022</span></div>
+      <div class="about-card-row"><span class="about-card-lbl">Microsoft Office</span><span class="about-card-val">Expert in Word, Excel, and PowerPoint</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ WORK -->
+<section id="work">
+  <div class="section-label"><div class="bar"></div><h2>Selected Work</h2><span class="badge">From Behance</span></div>
+
+  <div class="work-filter">
+    <button class="filter-btn active" data-f="all">All Work</button>
+    <button class="filter-btn" data-f="video">Video</button>
+    <button class="filter-btn" data-f="graphics">Graphics</button>
+  </div>
+
+  <div class="work-grid" id="workGrid"></div>
+
+  <div class="view-more-wrap reveal">
+    <a href="https://www.behance.net/tg_mustafizur" target="_blank" rel="noopener" class="btn btn-primary" style="background:var(--dark);color:var(--cream)">See Full Portfolio on Behance →</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ SERVICES -->
+<section id="services">
+  <div class="section-label"><div class="bar"></div><h2>Services</h2><span class="badge">What I offer</span></div>
+  <div class="svc-strip">
+    <div class="svc-tile reveal"><span class="svc-tile-icon">🎬</span><h3>Video Editing</h3><p>VOX-style edits, documentaries, YouTube videos, reels &amp; shorts, podcasts, corporate and wedding films.</p></div>
+    <div class="svc-tile reveal"><span class="svc-tile-icon">✨</span><h3>Motion Graphics</h3><p>Logo animations, kinetic titles, intros/outros and custom motion identity for your brand.</p></div>
+    <div class="svc-tile reveal"><span class="svc-tile-icon">🎨</span><h3>Graphic Design</h3><p>Thumbnails, posters, social media packs, brochures and print-ready designs.</p></div>
+    <div class="svc-tile reveal"><span class="svc-tile-icon">🏷️</span><h3>Branding</h3><p>Full brand identity — logo, colour system, typography and guideline packages.</p></div>
+  </div>
+  <div class="pricing-cta reveal">
+    <div class="pricing-cta-text">
+      <h3>Curious what it costs?</h3>
+      <p>Full interactive rate card with tiered pricing in USD &amp; BDT — right below.</p>
+    </div>
+    <a href="#dashboard" class="btn btn-primary">View Rate Card ↓</a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════ DASHBOARD -->
+<section id="dashboard">
+  <div class="section-label">
+    <div class="bar"></div>
+    <h2>Rate Card</h2>
+    <span class="badge">32 services</span>
+  </div>
+  <p style="font-size:12px;color:var(--muted);margin:-1rem 0 1.25rem">All rates below are billed per minute of finished/delivered content.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-lbl">Showing</div><div class="stat-val" id="st-count">32</div></div>
+    <div class="stat"><div class="stat-lbl">Avg basic (USD)</div><div class="stat-val" id="st-basic">—</div></div>
+    <div class="stat"><div class="stat-lbl">Avg premium (USD)</div><div class="stat-val" id="st-prem">—</div></div>
+    <div class="stat"><div class="stat-lbl">Tier multiplier</div><div class="stat-val" id="st-mult">—</div></div>
+  </div>
+
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search services…" />
+    <select id="cat">
+      <option value="all">All categories</option>
+      <option value="video">Video editing</option>
+      <option value="graphics">Graphic design</option>
+    </select>
+    <select id="sort">
+      <option value="name">Sort: A to Z</option>
+      <option value="basic-asc">Basic: low → high</option>
+      <option value="basic-desc">Basic: high → low</option>
+      <option value="prem-desc">Premium: high → low</option>
+    </select>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn active" id="tab-usd" onclick="setC('usd')">International (USD)</button>
+    <button class="tab-btn" id="tab-bdt" onclick="setC('bdt')">Local Bangladesh (BDT)</button>
+  </div>
+
+  <div class="svc-list" id="svc-list"></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════ RETAINERS -->
+<section id="retainers">
+  <div class="section-label"><div class="bar"></div><h2>Monthly retainers</h2><span class="badge">Best value</span></div>
+
+  <div class="plans">
+    <div class="plan">
+      <div class="plan-head">
+        <div class="plan-badge pop">Starter</div>
+        <div class="plan-title">Bronze plan</div>
+        <div class="plan-usd">$170<span style="font-size:14px;font-weight:400;color:var(--muted)"> / mo</span></div>
+        <div class="plan-bdt">Tk 18,500 / mo</div>
+      </div>
+      <div class="plan-body">
+        <div class="plan-feat">Up to 4 videos / mo (max 5 min each)</div>
+        <div class="plan-feat">Basic tier quality</div>
+        <div class="plan-feat">48-hr turnaround</div>
+        <div class="plan-feat">1 thumbnail / mo</div>
+      </div>
+    </div>
+
+    <div class="plan featured">
+      <div class="plan-head featured-head">
+        <div class="plan-badge pop inv">Most popular</div>
+        <div class="plan-title light">Growth plan</div>
+        <div class="plan-usd light">$330<span style="font-size:14px;font-weight:400;color:rgba(243,237,232,0.4)"> / mo</span></div>
+        <div class="plan-bdt light">Tk 36,500 / mo</div>
+      </div>
+      <div class="plan-body">
+        <div class="plan-feat">Up to 8 videos / mo (max 10 min each)</div>
+        <div class="plan-feat">Intermediate tier quality</div>
+        <div class="plan-feat">Priority queue</div>
+        <div class="plan-feat">2 thumbnails / mo</div>
+        <div class="plan-feat">Monthly strategy call</div>
+      </div>
+    </div>
+
+    <div class="plan">
+      <div class="plan-head">
+        <div class="plan-badge pop">Agency</div>
+        <div class="plan-title">Gold plan</div>
+        <div class="plan-usd">$660<span style="font-size:14px;font-weight:400;color:var(--muted)"> / mo</span></div>
+        <div class="plan-bdt">Tk 73,000 / mo</div>
+      </div>
+      <div class="plan-body">
+        <div class="plan-feat">Up to 15 videos / mo</div>
+        <div class="plan-feat">10 graphics tasks / mo</div>
+        <div class="plan-feat">Premium tier quality</div>
+        <div class="plan-feat">Dedicated Telegram channel</div>
+        <div class="plan-feat">Unlimited revisions</div>
+        <div class="plan-feat">Brand LUT included</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rush-strip">
+    <div>
+      <div class="rush-strip-label">⚡ Rush add-on</div>
+      <div class="rush-strip-note">Same-week turnaround guaranteed — stacks on any plan</div>
+    </div>
+    <div class="rush-strip-price">
+      <div class="rush-strip-usd">+$110 / mo</div>
+      <div class="rush-strip-bdt">+Tk 12,000 / mo</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════ ADD-ONS -->
+<section id="addons">
+  <div class="section-label"><div class="bar"></div><h2>Add-ons &amp; rush</h2><span class="badge">On top of base rate</span></div>
+
+  <div class="rush-warning">
+    <span style="font-size:16px;flex-shrink:0">⚠</span>
+    <span>Rush slots are limited — always confirm availability before booking. Surcharges are added on top of the base project rate.</span>
+  </div>
+
+  <div class="rush-cards">
+    <div class="rush-card">
+      <div class="rush-mult">+50%</div>
+      <div class="rush-card-title">Rush delivery</div>
+      <div class="rush-card-sub">24–48 hrs turnaround</div>
+      <div class="rush-card-note">confirm slot first</div>
+    </div>
+    <div class="rush-card">
+      <div class="rush-mult">+100%</div>
+      <div class="rush-card-title">Same-day rush</div>
+      <div class="rush-card-sub">Under 24 hrs turnaround</div>
+      <div class="rush-card-note">extremely limited</div>
+    </div>
+  </div>
+
+  <div class="addon-card">
+    <div class="addon-section-title">Revisions</div>
+    <div class="addon-row"><div><div class="addon-name">Extra revision round — international</div><div class="addon-desc">Charged after included rounds are exhausted</div></div><div class="addon-price">$12–$35<span style="font-size:12px;font-weight:400;color:var(--muted)"> / round</span></div></div>
+    <div class="addon-row"><div><div class="addon-name">Extra revision round — local</div><div class="addon-desc">Charged after included rounds are exhausted</div></div><div class="addon-price">Tk 1,200–2,800<span style="font-size:12px;font-weight:400;color:var(--muted)"> / round</span></div></div>
+
+    <div class="addon-section-title">Captions &amp; subtitles</div>
+    <div class="addon-row"><div><div class="addon-name">Closed captions — international</div><div class="addon-desc">Manual, 98%+ accuracy, SRT file included</div></div><div class="addon-price">+$6<span style="font-size:12px;font-weight:400;color:var(--muted)"> / min</span></div></div>
+    <div class="addon-row"><div><div class="addon-name">Closed captions — local</div><div class="addon-desc">Manual, 98%+ accuracy, SRT file included</div></div><div class="addon-price">+Tk 600<span style="font-size:12px;font-weight:400;color:var(--muted)"> / min</span></div></div>
+    <div class="addon-row"><div><div class="addon-name">Multi-language subtitles</div><div class="addon-desc">Client provides translation or add $17/min for translation</div></div><div class="addon-price">+$9<span style="font-size:12px;font-weight:400;color:var(--muted)"> / min / lang</span></div></div>
+
+    <div class="addon-section-title">Audio &amp; colour</div>
+    <div class="addon-row"><div><div class="addon-name">Color grading only (standalone)</div><div class="addon-desc">Isolated grade pass, no editing — DaVinci Resolve</div></div><div class="addon-price">$9–$22<span style="font-size:12px;font-weight:400;color:var(--muted)"> / min</span></div></div>
+    <div class="addon-row"><div><div class="addon-name">Audio mastering / noise removal</div><div class="addon-desc">Noise removal, loudness normalisation, EQ, de-essing</div></div><div class="addon-price">+$6–$17<span style="font-size:12px;font-weight:400;color:var(--muted)"> / min</span></div></div>
+    <div class="addon-row"><div><div class="addon-name">Custom brand LUT</div><div class="addon-desc">Colour-matched LUT for a consistent brand look</div></div><div class="addon-price">+$17<span style="font-size:12px;font-weight:400;color:var(--muted)"> flat</span></div></div>
+
+    <div class="addon-section-title">Delivery &amp; files</div>
+    <div class="addon-row"><div><div class="addon-name">Project file handover</div><div class="addon-desc">Full .prproj (Premiere) or .drp (DaVinci)</div></div><div class="addon-price">+$22–$56<span style="font-size:12px;font-weight:400;color:var(--muted)"> flat</span></div></div>
+    <div class="addon-row"><div><div class="addon-name">Platform resize (9:16, 1:1, 4:5)</div><div class="addon-desc">Reframed from master — not a simple crop</div></div><div class="addon-price">+$12–$28<span style="font-size:12px;font-weight:400;color:var(--muted)"> / format</span></div></div>
+    <div class="addon-row"><div><div class="addon-name">Voiceover sync / timing</div><div class="addon-desc">Client provides VO — editor syncs to picture</div></div><div class="addon-price">+$6<span style="font-size:12px;font-weight:400;color:var(--muted)"> / min</span></div></div>
+
+    <div class="addon-section-title">Extras</div>
+    <div class="addon-row"><div><div class="addon-name">Thumbnail (added to video order)</div><div class="addon-desc">Discounted rate when ordered alongside a video edit</div></div><div class="addon-price">+$10 / +$17<span style="font-size:12px;font-weight:400;color:var(--muted)"> basic / intl+</span></div></div>
+    <div class="addon-row"><div><div class="addon-name">Stock footage / assets</div><div class="addon-desc">Envato, Storyblocks, Artgrid — invoice shared</div></div><div class="addon-price">Cost <span style="font-size:12px;font-weight:400;color:var(--muted)">+ 15% sourcing fee</span></div></div>
+    <div class="addon-row"><div><div class="addon-name">NDA / confidentiality agreement</div><div class="addon-desc">Standard NDA — countersignature required before work begins</div></div><div class="addon-price free">Free</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TRANSACTION DETAILS -->
+<section id="transactions">
+  <div class="section-label"><div class="bar"></div><h2>Payment &amp; transaction details</h2><span class="badge">Payment information</span></div>
+  <div class="transaction-grid">
+    <div class="transaction-card">
+      <h3>Available payment methods</h3>
+      <p>Use the method that works best for you, and include your project name in the payment note.</p>
+      <div id="payment-methods"><div class="payment-method"><div><div class="payment-name">bKash</div><div class="payment-type">Bangladesh</div></div><div class="copy-value"><span>01640494234</span><button class="copy-btn" onclick="copyPayment(this)">Copy</button></div></div>
+      <div class="payment-method"><div><div class="payment-name">PayPal</div><div class="payment-type">International</div></div><div class="copy-value"><span>tgmustafizur@gmail.com</span><button class="copy-btn" onclick="copyPayment(this)">Copy</button></div></div></div>
+      <div class="transaction-note">After payment, please send the transaction ID or receipt so the booking can be confirmed.</div>
+    </div>
+    <div class="transaction-card">
+      <h3>Bank transfer accounts</h3><p>Use the account details below for local bank transfers.</p>
+      <div class="bank-list" id="bank-accounts">
+        <div class="bank-card"><h4>City Bank PLC</h4><div class="bank-detail"><span>Holder name</span><span>MD. SHOWROB MAHMUD</span></div><div class="bank-detail"><span>Account number</span><span>2394941648001</span></div><div class="bank-detail"><span>Branch</span><span>KARWAN BAZAR</span></div><div class="bank-detail"><span>Routing number</span><span>225262531</span></div></div>
+        <div class="bank-card"><h4>Dutch-Bangla Bank</h4><div class="bank-detail"><span>Holder name</span><span>MD. SHOWROB MAHMUD</span></div><div class="bank-detail"><span>Account number</span><span>1191580422536</span></div><div class="bank-detail"><span>Branch</span><span>119-Dania Branch</span></div><div class="bank-detail"><span>Routing number</span><span>090271423</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="tiers">
+  <div class="section-label"><div class="bar"></div><h2>Tier definitions</h2><span class="badge">What each level includes</span></div>
+
+  <div class="tier-grid">
+    <div class="tier-card">
+      <div class="tier-head-bar b1"></div>
+      <div class="tier-head">
+        <div class="tier-name">Basic</div>
+        <div class="tier-tag t1">Entry level · 2 revisions</div>
+      </div>
+      <div class="tier-feats">
+        <div class="feat plus"><span class="ck">✓</span>Rough cut + timeline cleanup</div>
+        <div class="feat plus"><span class="ck">✓</span>Simple transitions (cuts, fades)</div>
+        <div class="feat plus"><span class="ck">✓</span>Basic color correction (auto)</div>
+        <div class="feat plus"><span class="ck">✓</span>2 revision rounds</div>
+        <div class="feat plus"><span class="ck">✓</span>1080p MP4 export (H.264)</div>
+        <div class="feat plus"><span class="ck">✓</span>Royalty-free background music</div>
+        <div class="feat plus"><span class="ck">✓</span>Basic subtitles on request</div>
+      </div>
+    </div>
+
+    <div class="tier-card t-mid">
+      <div class="tier-head-bar b2"></div>
+      <div class="tier-head">
+        <div class="tier-name">Intermediate</div>
+        <div class="tier-tag t2">Most popular · 3 revisions</div>
+      </div>
+      <div class="tier-feats">
+        <div class="feat inherited"><span class="ck">↳</span>Everything in Basic, plus:</div>
+        <div class="feat plus"><span class="ck">✓</span>Manual color grading (LUT-based)</div>
+        <div class="feat plus"><span class="ck">✓</span>Custom lower thirds + text anim.</div>
+        <div class="feat plus"><span class="ck">✓</span>B-roll sourcing + sync (up to 20%)</div>
+        <div class="feat plus"><span class="ck">✓</span>Sound design + SFX polish</div>
+        <div class="feat plus"><span class="ck">✓</span>1 thumbnail included</div>
+        <div class="feat plus"><span class="ck">✓</span>Chapter markers + timestamps</div>
+        <div class="feat plus"><span class="ck">✓</span>1080p + 4K export</div>
+      </div>
+    </div>
+
+    <div class="tier-card t-prem">
+      <div class="tier-head-bar b3"></div>
+      <div class="tier-head">
+        <div class="tier-name">Premium</div>
+        <div class="tier-tag t3">Full service · Unlimited revisions</div>
+      </div>
+      <div class="tier-feats">
+        <div class="feat inherited"><span class="ck">↳</span>Everything in Intermediate, plus:</div>
+        <div class="feat plus"><span class="ck">✓</span>Cinematic color grade (DaVinci)</div>
+        <div class="feat plus"><span class="ck">✓</span>Custom motion graphics + intro/outro</div>
+        <div class="feat plus"><span class="ck">✓</span>Advanced SFX + foley layering</div>
+        <div class="feat plus"><span class="ck">✓</span>Priority 48-hr turnaround</div>
+        <div class="feat plus"><span class="ck">✓</span>2 thumbnail variations + social cuts</div>
+        <div class="feat plus"><span class="ck">✓</span>Project file handover</div>
+        <div class="feat plus"><span class="ck">✓</span>Dedicated Telegram channel</div>
+        <div class="feat plus"><span class="ck">✓</span>Custom brand LUT</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="compare-wrap">
+    <div class="compare-head">
+      <span>Feature</span><span>Basic</span><span>Intermediate</span><span>Premium</span>
+    </div>
+    <div class="compare-row"><span>Color correction</span><span class="ck-yes">✓</span><span class="ck-yes">✓</span><span class="ck-yes">✓</span></div>
+    <div class="compare-row"><span>Manual color grading</span><span class="ck-no">·</span><span class="ck-yes">✓</span><span class="ck-yes">✓</span></div>
+    <div class="compare-row"><span>Cinematic grade (DaVinci)</span><span class="ck-no">·</span><span class="ck-no">·</span><span class="ck-yes">✓</span></div>
+    <div class="compare-row"><span>Custom lower thirds</span><span class="ck-no">·</span><span class="ck-yes">✓</span><span class="ck-yes">✓</span></div>
+    <div class="compare-row"><span>Motion graphics + intro/outro</span><span class="ck-no">·</span><span class="ck-no">·</span><span class="ck-yes">✓</span></div>
+    <div class="compare-row"><span>B-roll sourcing + sync</span><span class="ck-no">·</span><span class="ck-yes">✓</span><span class="ck-yes">✓</span></div>
+    <div class="compare-row"><span>Sound design + SFX</span><span class="ck-no">·</span><span class="ck-yes">✓</span><span class="ck-yes">✓</span></div>
+    <div class="compare-row"><span>Foley sound layering</span><span class="ck-no">·</span><span class="ck-no">·</span><span class="ck-yes">✓</span></div>
+    <div class="compare-row"><span>Thumbnail included</span><span class="ck-no">·</span><span class="ck-txt">1 var.</span><span class="ck-txt">2 var.</span></div>
+    <div class="compare-row"><span>Social media cuts</span><span class="ck-no">·</span><span class="ck-no">·</span><span class="ck-yes">✓</span></div>
+    <div class="compare-row"><span>Revision rounds</span><span class="ck-txt">2</span><span class="ck-txt">3</span><span class="ck-txt">∞</span></div>
+    <div class="compare-row"><span>4K export</span><span class="ck-no">·</span><span class="ck-yes">✓</span><span class="ck-yes">✓</span></div>
+    <div class="compare-row"><span>Project file handover</span><span class="ck-no">·</span><span class="ck-no">·</span><span class="ck-yes">✓</span></div>
+    <div class="compare-row"><span>Priority 48-hr turnaround</span><span class="ck-no">·</span><span class="ck-no">·</span><span class="ck-yes">✓</span></div>
+    <div class="compare-row"><span>Dedicated project channel</span><span class="ck-no">·</span><span class="ck-no">·</span><span class="ck-yes">✓</span></div>
+    <div class="compare-row"><span>Custom brand LUT</span><span class="ck-no">·</span><span class="ck-no">·</span><span class="ck-yes">✓</span></div>
+  </div>
+  <p style="font-size:11.5px;color:var(--muted);margin-top:0.75rem">50% deposit upfront · 50% on delivery · Batch discount: 10% on 5+ same-type videos</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════ CONTACT -->
+<section id="contact">
+  <div class="section-label"><div class="bar"></div><h2>Let's Work Together</h2><span class="badge">Get in touch</span></div>
+  <div class="contact-wrap">
+    <div class="contact-info reveal">
+      <p>Have a project in mind? Send a message below and it'll land straight in my inbox — I usually reply within a day, straight back to your email.</p>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:tgmustafizur@gmail.com"><span class="ico"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span> tgmustafizur@gmail.com</a>
+        <a class="contact-link" href="https://www.behance.net/tg_mustafizur" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6.09 5.5c1.4 0 2.5.34 3.4 1.03.9.68 1.35 1.72 1.35 3.1 0 .84-.2 1.55-.6 2.14-.28.42-.7.79-1.24 1.1.75.28 1.32.72 1.7 1.32.44.68.66 1.5.66 2.44 0 .95-.24 1.78-.72 2.5-.3.46-.68.85-1.14 1.16-.51.35-1.1.6-1.78.74-.66.14-1.44.21-2.34.21H0V5.5h6.09Zm-.35 6.02c.72 0 1.3-.16 1.75-.48.45-.32.67-.86.67-1.6 0-.42-.08-.76-.23-1.03a1.7 1.7 0 0 0-.63-.63 2.6 2.6 0 0 0-.9-.3 6.9 6.9 0 0 0-1.05-.08H2.9v4.12h2.84Zm.32 6.34c.4 0 .78-.04 1.13-.11.35-.08.66-.2.92-.39.26-.18.47-.43.62-.74.15-.31.23-.71.23-1.19 0-.94-.27-1.6-.8-1.99-.53-.38-1.24-.57-2.1-.57H2.9v4.99h3.16ZM23.66 8.9h-6.9V7.16h6.9V8.9ZM17.02 15.03c.05.94.3 1.7.75 2.28.45.57 1.14.86 2.08.86.68 0 1.26-.17 1.75-.5.5-.34.8-.7.92-1.08h2.44c-.39 1.21-1 2.08-1.83 2.6-.82.53-1.82.8-2.98.8-.81 0-1.55-.13-2.2-.4a4.63 4.63 0 0 1-1.67-1.13 5.08 5.08 0 0 1-1.05-1.75 6.62 6.62 0 0 1-.37-2.25c0-.79.13-1.53.38-2.22a5.2 5.2 0 0 1 1.08-1.76c.46-.5 1.02-.88 1.66-1.16a5.4 5.4 0 0 1 2.15-.42c.85 0 1.6.16 2.27.5.66.32 1.2.77 1.63 1.34.42.56.73 1.21.92 1.95.19.73.25 1.5.2 2.32h-8.13Zm4.7-1.7c-.08-.78-.32-1.37-.72-1.79-.4-.42-.98-.63-1.72-.63-.48 0-.88.09-1.22.26-.34.17-.6.38-.82.63-.2.25-.36.51-.45.79-.1.28-.16.53-.18.74h5.11Z"/></svg></span> behance.net/tg_mustafizur</a>
+        <a class="contact-link" href="https://instagram.com/tgmustafizur" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></span> @tgmustafizur</a>
+        <a class="contact-link" href="http://t.me/tg_mustafizur" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></span> @tg_mustafizur</a>
+      </div>
+    </div>
+    <div class="form-card reveal">
+      <form id="contactForm">
+        <div class="form-row"><label>Your Name</label><input type="text" name="name" required placeholder="Jane Doe" /></div>
+        <div class="form-row"><label>Your Email</label><input type="email" name="email" required placeholder="jane@example.com" /></div>
+        <div class="form-row"><label>Project Type</label>
+          <select name="project_type">
+            <option>Video Editing</option>
+            <option>Graphic Design</option>
+            <option>Branding</option>
+            <option>Motion Graphics</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-row"><label>Message</label><textarea name="message" required placeholder="Tell me about your project..."></textarea></div>
+        <button type="submit" class="btn btn-primary form-submit" id="submitBtn">Send Message</button>
+        <div class="form-status" id="formStatus"></div>
+        <p class="form-note">Sent directly to my Gmail inbox — I'll reply to you from there.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">Mustafizur <span>Rohman</span></div>
+  <div class="footer-socials">
+    <a href="https://www.behance.net/tg_mustafizur" target="_blank" rel="noopener" title="Behance" aria-label="Behance"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M6.09 5.5c1.4 0 2.5.34 3.4 1.03.9.68 1.35 1.72 1.35 3.1 0 .84-.2 1.55-.6 2.14-.28.42-.7.79-1.24 1.1.75.28 1.32.72 1.7 1.32.44.68.66 1.5.66 2.44 0 .95-.24 1.78-.72 2.5-.3.46-.68.85-1.14 1.16-.51.35-1.1.6-1.78.74-.66.14-1.44.21-2.34.21H0V5.5h6.09Zm-.35 6.02c.72 0 1.3-.16 1.75-.48.45-.32.67-.86.67-1.6 0-.42-.08-.76-.23-1.03a1.7 1.7 0 0 0-.63-.63 2.6 2.6 0 0 0-.9-.3 6.9 6.9 0 0 0-1.05-.08H2.9v4.12h2.84Zm.32 6.34c.4 0 .78-.04 1.13-.11.35-.08.66-.2.92-.39.26-.18.47-.43.62-.74.15-.31.23-.71.23-1.19 0-.94-.27-1.6-.8-1.99-.53-.38-1.24-.57-2.1-.57H2.9v4.99h3.16ZM23.66 8.9h-6.9V7.16h6.9V8.9ZM17.02 15.03c.05.94.3 1.7.75 2.28.45.57 1.14.86 2.08.86.68 0 1.26-.17 1.75-.5.5-.34.8-.7.92-1.08h2.44c-.39 1.21-1 2.08-1.83 2.6-.82.53-1.82.8-2.98.8-.81 0-1.55-.13-2.2-.4a4.63 4.63 0 0 1-1.67-1.13 5.08 5.08 0 0 1-1.05-1.75 6.62 6.62 0 0 1-.37-2.25c0-.79.13-1.53.38-2.22a5.2 5.2 0 0 1 1.08-1.76c.46-.5 1.02-.88 1.66-1.16a5.4 5.4 0 0 1 2.15-.42c.85 0 1.6.16 2.27.5.66.32 1.2.77 1.63 1.34.42.56.73 1.21.92 1.95.19.73.25 1.5.2 2.32h-8.13Zm4.7-1.7c-.08-.78-.32-1.37-.72-1.79-.4-.42-.98-.63-1.72-.63-.48 0-.88.09-1.22.26-.34.17-.6.38-.82.63-.2.25-.36.51-.45.79-.1.28-.16.53-.18.74h5.11Z"/></svg></a>
+    <a href="https://instagram.com/tgmustafizur" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+    <a href="https://twitter.com/tg_mustafizur" target="_blank" rel="noopener" title="Twitter / X" aria-label="Twitter / X"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.22-6.83-5.97 6.83H1.66l7.73-8.84L1.24 2.25h6.83l4.72 6.24 5.45-6.24Zm-1.16 17.52h1.83L7.02 4.13H5.06l12.02 15.64Z"/></svg></a>
+    <a href="https://facebook.com/tgmustafizur" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M13.5 21v-8.2h2.75l.41-3.2h-3.16V7.55c0-.93.26-1.56 1.59-1.56h1.7V3.13C15.98 3.03 15 2.94 13.87 2.94c-2.36 0-3.97 1.44-3.97 4.08v2.58H7.14v3.2h2.76V21h3.6Z"/></svg></a>
+    <a href="https://pinterest.com/tg_mustafizur" target="_blank" rel="noopener" title="Pinterest" aria-label="Pinterest"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 2C6.48 2 2 6.35 2 11.72c0 4.12 2.6 7.64 6.26 9.03-.09-.77-.16-1.95.03-2.79.18-.76 1.16-4.85 1.16-4.85s-.3-.59-.3-1.47c0-1.37.8-2.4 1.8-2.4.85 0 1.26.63 1.26 1.38 0 .84-.54 2.11-.82 3.28-.23.98.5 1.78 1.48 1.78 1.78 0 3.15-1.85 3.15-4.52 0-2.36-1.72-4.02-4.18-4.02-2.85 0-4.52 2.11-4.52 4.29 0 .85.33 1.76.75 2.25a.3.3 0 0 1 .07.29c-.08.31-.25 1-.28 1.14-.05.18-.15.22-.34.13-1.26-.58-2.05-2.4-2.05-3.87 0-3.15 2.31-6.04 6.65-6.04 3.49 0 6.21 2.47 6.21 5.78 0 3.45-2.19 6.22-5.22 6.22-1.02 0-1.98-.53-2.3-1.15l-.63 2.38c-.23.87-.84 1.97-1.25 2.63.94.29 1.94.44 2.98.44 5.52 0 10-4.35 10-9.72C22 6.35 17.52 2 12 2Z"/></svg></a>
+    <a href="http://t.me/tg_mustafizur" target="_blank" rel="noopener" title="Telegram" aria-label="Telegram"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></a>
+    <a href="http://dribbble.com/tg_mustafizur" target="_blank" rel="noopener" title="Dribbble" aria-label="Dribbble"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6 6.31 11 6.94 17.6M19.13 5.09c-2.19 3.06-5.71 4.7-11.9 5.24a35 35 0 0 1-6.53-.06M21.29 15.09c-2.87-.81-6.87-1.13-9.13-.9-2.5.24-4.24.86-6.53 2.16"/></svg></a>
+  </div>
+  <div class="footer-links">
+    <a href="#top">Home</a><a href="#about">About</a><a href="#work">Work</a><a href="#dashboard">Pricing</a><a href="#contact">Contact</a>
+  </div>
+  <div class="footer-bottom">Video Editing &amp; Graphic Design · Dhaka, Bangladesh · © <span id="yr"></span> Mustafizur Rohman</div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ── nav toggle ── */
+const navToggle=document.getElementById('navToggle');
+const navLinks=document.getElementById('navLinks');
+navToggle.addEventListener('click',()=>navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+/* ── work data (from behance.net/tg_mustafizur) ── */
+const projects=[
+  {n:"Vox Style Edit",cat:"video",img:"https://mir-s3-cdn-cf.behance.net/projects/404/02a054235631239.Y3JvcCwxMDYzLDgzMiw5Miww.png",url:"https://www.behance.net/gallery/235631239/Vox-Style-Edit",appr:73,views:2494},
+  {n:"Documentary Videos",cat:"video",img:"https://mir-s3-cdn-cf.behance.net/projects/404/6445da231957051.Y3JvcCwxMzA5LDEwMjQsMTEzLDA.png",url:"https://www.behance.net/gallery/231957051/Documentary-Videos",appr:0,views:48},
+  {n:"Shorts Reels",cat:"video",img:"https://mir-s3-cdn-cf.behance.net/projects/404/a453d8233040585.69fbf6ca7a394.png",url:"https://www.behance.net/gallery/233040585/Shorts-Reels",appr:2,views:103},
+  {n:"Motion Graphics",cat:"video",img:"https://mir-s3-cdn-cf.behance.net/projects/404/8ec9dd227967201.6a027650bb279.png",url:"https://www.behance.net/gallery/227967201/Motion-Graphics",appr:1,views:69},
+  {n:"Logo Animation",cat:"video",img:"https://mir-s3-cdn-cf.behance.net/projects/404/18ad32227807305.Y3JvcCwxMzA5LDEwMjQsMTEzLDA.png",url:"https://www.behance.net/gallery/227807305/Logo-Animation",appr:4,views:46},
+  {n:"Branding — NOVO MOTORS",cat:"graphics",img:"https://mir-s3-cdn-cf.behance.net/projects/404/1c2c1b249164205.Y3JvcCw0NzkxLDM3NDgsMTkwOSww.jpg",url:"https://www.behance.net/gallery/249164205/Branding-NOVO-MOTORS",appr:0,views:88},
+  {n:"Poster Design",cat:"graphics",img:"https://mir-s3-cdn-cf.behance.net/projects/404/823353234624615.Y3JvcCwxMTQ1LDg5NSwyLDA.png",url:"https://www.behance.net/gallery/234624615/Poster-Design",appr:2,views:54},
+  {n:"T-Shirt Design",cat:"graphics",img:"https://mir-s3-cdn-cf.behance.net/projects/404/97cb71225099609.Y3JvcCwxMzA5LDEwMjQsMCww.jpg",url:"https://www.behance.net/gallery/225099609/T-Shirt-Design",appr:3,views:30},
+  {n:"Social Media Design",cat:"graphics",img:"https://mir-s3-cdn-cf.behance.net/projects/404/f49971216333999.Y3JvcCwxMzA5LDEwMjQsMTEzLDA.png",url:"https://www.behance.net/gallery/216333999/Social-Media-Design",appr:1,views:21},
+  {n:"Image Manipulation",cat:"graphics",img:"https://mir-s3-cdn-cf.behance.net/projects/404/c01055225098085.Y3JvcCwxMzA5LDEwMjQsMTEzLDA.png",url:"https://www.behance.net/gallery/225098085/Image-Manipulation",appr:3,views:10},
+  {n:"Brochure Design",cat:"graphics",img:"https://mir-s3-cdn-cf.behance.net/projects/404/d6d2df227739831.Y3JvcCwxMzA5LDEwMjQsMTYyLDA.png",url:"https://www.behance.net/gallery/227739831/Brochure-Design",appr:1,views:11},
+  {n:"Desk Calendar Design",cat:"graphics",img:"https://mir-s3-cdn-cf.behance.net/projects/404/3f7f24216445805.Y3JvcCwxMzA5LDEwMjQsNjEsMA.png",url:"https://www.behance.net/gallery/216445805/Desk-Calendar-Design",appr:1,views:14},
+];
+
+function renderWork(filter){
+  const grid=document.getElementById('workGrid');
+  const list=filter==='all'?projects:projects.filter(p=>p.cat===filter);
+  grid.innerHTML=list.map(p=>`
+    <a class="work-card reveal in" href="${p.url}" target="_blank" rel="noopener">
+      <div class="work-thumb">
+        <img src="${p.img}" alt="${p.n}" loading="lazy" />
+        <div class="work-thumb-overlay"><span>View on Behance ↗</span></div>
+      </div>
+      <div class="work-body">
+        <div class="work-top">
+          <span class="work-name">${p.n}</span>
+          <span class="work-cat ${p.cat}">${p.cat==='video'?'Video':'Graphics'}</span>
+        </div>
+        <div class="work-meta">
+          <span>♥ ${p.appr} appreciations</span>
+          <span>👁 ${p.views.toLocaleString()} views</span>
+        </div>
+      </div>
+    </a>`).join('');
+}
+renderWork('all');
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    renderWork(btn.dataset.f);
+  });
+});
+
+/* ── scroll reveal ── */
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ── active nav link on scroll ── */
+window.addEventListener('scroll',()=>{
+  const sections=['top','about','work','services','dashboard','retainers','addons','transactions','tiers','contact'];
+  const links=document.querySelectorAll('.nav-links a[href^="#"]');
+  let current='top';
+  sections.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el&&el.getBoundingClientRect().top<=90)current=id;
+  });
+  links.forEach(a=>{
+    a.classList.toggle('active',a.getAttribute('href')==='#'+current);
+  });
+});
+
+/* ── rate card: pricing data & interactions ── */
+const rateData=[
+  {n:"YouTube video (talking head / vlog)",cat:"video",usd:[9,17,28],bdt:[900,1700,2800]},
+  {n:"YouTube video (documentary-style)",cat:"video",usd:[17,28,45],bdt:[1700,2800,4500]},
+  {n:"YouTube video (cinematic / high-end)",cat:"video",usd:[22,39,68],bdt:[2200,3900,6800]},
+  {n:"Short reels / TikTok / shorts (under 60s)",cat:"video",usd:[14,22,40],bdt:[1100,2000,3300]},
+  {n:"Podcast video edit (full episode)",cat:"video",usd:[6,12,20],bdt:[600,1100,2000]},
+  {n:"Podcast video edit (audiogram / clips)",cat:"video",usd:[9,17,25],bdt:[900,1700,2500]},
+  {n:"Documentary edit",cat:"video",usd:[20,34,62],bdt:[1700,3100,5500]},
+  {n:"Vox-pop / interview edit",cat:"video",usd:[12,20,35],bdt:[1100,2000,3300]},
+  {n:"Corporate / brand video",cat:"video",usd:[17,32,56],bdt:[1700,3100,5500]},
+  {n:"Wedding / event video highlights",cat:"video",usd:[14,25,45],bdt:[1300,2400,4500]},
+  {n:"Music video edit",cat:"video",usd:[22,40,72],bdt:[2200,3900,7200]},
+  {n:"Commercial / ad (15–60 sec)",cat:"video",usd:[28,50,90],bdt:[2800,5000,9000]},
+  {n:"Educational / eLearning video",cat:"video",usd:[9,16,27],bdt:[900,1600,2700]},
+  {n:"Real estate / property tour",cat:"video",usd:[12,20,35],bdt:[1100,2000,3300]},
+  {n:"Gaming content / let's play",cat:"video",usd:[7,14,22],bdt:[700,1300,2200]},
+  {n:"Travel / lifestyle vlog",cat:"video",usd:[12,20,36],bdt:[1100,2000,3300]},
+  {n:"Product review / unboxing",cat:"video",usd:[8,15,25],bdt:[800,1500,2500]},
+  {n:"News / magazine style",cat:"video",usd:[14,22,40],bdt:[1300,2200,3900]},
+  {n:"YouTube thumbnail",cat:"graphics",usd:[10,20,40],bdt:[800,1700,3300]},
+  {n:"Logo design",cat:"graphics",usd:[30,70,170],bdt:[2200,5500,13500]},
+  {n:"Social media post (per post)",cat:"graphics",usd:[6,14,28],bdt:[600,1300,2500]},
+  {n:"Social media pack (10 posts)",cat:"graphics",usd:[45,100,220],bdt:[3900,8500,18000]},
+  {n:"Brand identity package",cat:"graphics",usd:[90,220,560],bdt:[7800,18000,44000]},
+  {n:"Animated intro / outro (5–15s)",cat:"graphics",usd:[22,56,135],bdt:[2200,5000,11000]},
+  {n:"Lower thirds pack (5 items)",cat:"graphics",usd:[17,40,90],bdt:[1700,3900,9000]},
+  {n:"Infographic",cat:"graphics",usd:[22,50,115],bdt:[2200,5000,11000]},
+  {n:"Banner / cover art",cat:"graphics",usd:[10,20,45],bdt:[900,2000,4500]},
+  {n:"Presentation / pitch deck (per slide)",cat:"graphics",usd:[6,12,22],bdt:[600,1100,2000]},
+  {n:"Business card / stationery",cat:"graphics",usd:[17,40,90],bdt:[1300,3300,7800]},
+  {n:"Merchandise / apparel design",cat:"graphics",usd:[22,56,135],bdt:[2200,5500,13500]},
+  {n:"Motion graphic (short, under 10s)",cat:"graphics",usd:[28,62,145],bdt:[2800,6200,14500]},
+  {n:"YouTube end screen / card design",cat:"graphics",usd:[12,25,50],bdt:[1200,2500,5000]},
+];
+
+let currency='usd';
+function fmt(v){return currency==='usd'?'$'+v:'Tk '+v.toLocaleString();}
+
+function renderRates(){
+  const q=document.getElementById('search').value.toLowerCase();
+  const cat=document.getElementById('cat').value;
+  const sort=document.getElementById('sort').value;
+  let list=rateData.filter(d=>d.n.toLowerCase().includes(q)&&(cat==='all'||d.cat===cat));
+  list.sort((a,b)=>{
+    if(sort==='name')return a.n.localeCompare(b.n);
+    if(sort==='basic-asc')return a.usd[0]-b.usd[0];
+    if(sort==='basic-desc')return b.usd[0]-a.usd[0];
+    if(sort==='prem-desc')return b.usd[2]-a.usd[2];
+    return 0;
+  });
+  const el=document.getElementById('svc-list');
+  if(!list.length){el.innerHTML='<div class="empty-state">No services match your search.</div>';return;}
+  el.innerHTML=list.map(d=>{
+    const[b,m,p]=d[currency];
+    const unit=d.cat==='video'?'/min':'';
+    return`<div class="svc-row">
+      <div class="svc-top">
+        <span class="svc-name">${d.n}</span>
+        <span class="svc-cat ${d.cat}">${d.cat==='video'?'Video':'Graphics'}</span>
+      </div>
+      <div class="svc-prices">
+        <div class="svc-price"><span class="svc-price-lbl">Basic</span><span class="svc-price-val b">${fmt(b)}<span class="svc-price-unit">${unit}</span></span></div>
+        <div class="svc-price"><span class="svc-price-lbl">Intermediate</span><span class="svc-price-val m">${fmt(m)}<span class="svc-price-unit">${unit}</span></span></div>
+        <div class="svc-price"><span class="svc-price-lbl">Premium</span><span class="svc-price-val p">${fmt(p)}<span class="svc-price-unit">${unit}</span></span></div>
+      </div>
+    </div>`;
+  }).join('');
+  document.getElementById('st-count').textContent=list.length;
+  if(list.length){
+    const avgB=list.reduce((s,d)=>s+d.usd[0],0)/list.length;
+    const avgP=list.reduce((s,d)=>s+d.usd[2],0)/list.length;
+    document.getElementById('st-basic').textContent='$'+Math.round(avgB);
+    document.getElementById('st-prem').textContent='$'+Math.round(avgP);
+    document.getElementById('st-mult').textContent=(avgP/avgB).toFixed(1)+'x';
+  }
+}
+
+function setC(c){
+  currency=c;
+  document.getElementById('tab-usd').classList.toggle('active',c==='usd');
+  document.getElementById('tab-bdt').classList.toggle('active',c==='bdt');
+  renderRates();
+}
+
+function copyPayment(button){
+  const value=button.previousElementSibling.textContent;
+  navigator.clipboard.writeText(value).then(()=>{
+    const original=button.textContent;button.textContent='Copied';
+    setTimeout(()=>button.textContent=original,1400);
+  });
+}
+
+document.getElementById('search').addEventListener('input',renderRates);
+document.getElementById('cat').addEventListener('change',renderRates);
+document.getElementById('sort').addEventListener('change',renderRates);
+renderRates();
+
+/* ── contact form → Formspree (delivers straight to Gmail inbox) ──
+   Setup: create a free form at https://formspree.io using tgmustafizur@gmail.com,
+   then replace YOUR_FORM_ID below with the ID Formspree gives you. Until then,
+   submissions fall back to opening a pre-filled email to tgmustafizur@gmail.com. */
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xaewpokk";
+const contactForm=document.getElementById('contactForm');
+const formStatus=document.getElementById('formStatus');
+const submitBtn=document.getElementById('submitBtn');
+
+contactForm.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const data=new FormData(contactForm);
+  const payload=Object.fromEntries(data.entries());
+  submitBtn.textContent='Sending...';
+  submitBtn.disabled=true;
+
+  if(FORMSPREE_ENDPOINT.includes('YOUR_FORM_ID')){
+    const subject=encodeURIComponent(`New project inquiry — ${payload.project_type}`);
+    const body=encodeURIComponent(`Name: ${payload.name}\nEmail: ${payload.email}\nProject type: ${payload.project_type}\n\n${payload.message}`);
+    window.location.href=`mailto:tgmustafizur@gmail.com?subject=${subject}&body=${body}`;
+    formStatus.textContent="Opening your email app to send this — set up Formspree for one-click sending (see code comment).";
+    formStatus.className='form-status show ok';
+    submitBtn.textContent='Send Message';
+    submitBtn.disabled=false;
+    return;
+  }
+
+  try{
+    const res=await fetch(FORMSPREE_ENDPOINT,{
+      method:'POST',
+      headers:{'Accept':'application/json'},
+      body:data
+    });
+    if(res.ok){
+      formStatus.textContent="Thanks! Your message is on its way — I'll reply to your email soon.";
+      formStatus.className='form-status show ok';
+      contactForm.reset();
+    } else {
+      throw new Error('Submission failed');
+    }
+  } catch(err){
+    formStatus.textContent="Something went wrong — please email tgmustafizur@gmail.com directly.";
+    formStatus.className='form-status show err';
+  } finally {
+    submitBtn.textContent='Send Message';
+    submitBtn.disabled=false;
+  }
+});
+</script>
+</body>
+</html>
